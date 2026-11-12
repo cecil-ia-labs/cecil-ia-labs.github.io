@@ -59,8 +59,8 @@ test('Google Search Console verification is staged for GitHub Pages', () => {
   const filename = 'googleb1036de8851a2742.html';
   assert.equal(readFileSync(resolve(root, filename), 'utf8').trim(), 'google-site-verification: ' + filename);
   const workflow = readFileSync(resolve(root, '.github/workflows/deploy.yml'), 'utf8');
-  assert.match(workflow, /for verification_file in google\\\*\\\.html/);
-  assert.match(workflow, /cp "\\$verification_file" _site\\//);
+  assert.ok(workflow.includes('for verification_file in google*.html'));
+  assert.ok(workflow.includes('cp "$verification_file" _site/'));
 });
 
 test('light theme keeps its intentional warm-vivid palette', () => {
