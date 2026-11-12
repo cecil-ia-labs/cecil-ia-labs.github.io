@@ -1,8 +1,7 @@
 name: Publish Cecil-IA Labs portal
 
+# Manual deployment: prevents runs on every push.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
