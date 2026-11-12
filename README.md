@@ -13,7 +13,7 @@ Tema claro editorial com a paleta **Sunset Coral `#FF7A63`**, **Magenta `#E445A2
 - Portal estático responsivo e acessível, sem dependências externas de runtime.
 - Interface em português e inglês, com seleção persistida no navegador.
 - Busca, filtros por área e cartões com links para repositórios e publicações.
-- Catálogo editável em [`data/projects.json`](data/projects.json), inicialmente com **9 repositórios públicos confirmados**.
+- Catálogo editável em [`data/projects.json`](data/projects.json), inicialmente com **7 repositórios públicos catalogados**.
 - GitHub Actions com testes e publicação no GitHub Pages.
 - HTML semântico, respeito a `prefers-reduced-motion` e URLs `https` nos links externos.
 
