@@ -1,105 +1,36 @@
 # Cecil-IA Labs · Open Source Observatory
 
-Portal open source da organização [cecil-ia-labs](https://github.com/cecil-ia-labs), publicado em **https://cecil-ia-labs.github.io/**.
+**Language:** [English](README.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md)
 
-**Objetivo:** apresentar projetos de pesquisa, ferramentas, bibliotecas e conteúdos abertos da Cecil-IA Labs. É independente do site institucional [cecilialabs.com](https://www.cecilialabs.com/) e não substitui o GitHub Pages de projetos individuais, como [`/lattes2orcid/`](https://cecil-ia-labs.github.io/lattes2orcid/).
+**Research, code, and ideas in orbit.**
 
-## Identidade visual
+Welcome to the open-source space of **[Cecil-IA Labs](https://www.cecilialabs.com/)**. We bring scientific curiosity and software engineering together to test hypotheses, create practical tools, and publish what we learn.
 
-Tema claro editorial com a paleta **Sunset Coral `#FF7A63`**, **Magenta `#E445A2`**, **Violet `#7A5CFF`** e texto **Midnight Navy `#0D1438`**. A paleta foi inspirada na direção Similens v2, mas o portal mantém identidade orbital e logo próprios. Cores saturadas são usadas em detalhes, hierarquia e visualização, não em superfícies de texto longas. Tipografia Inter com fallback para fontes do sistema, sem fontes externas.
+**[Explore the Observatory](https://cecil-ia-labs.github.io/)** · **[Meet the laboratory](https://www.cecilialabs.com/)** · **[Browse the organization](https://github.com/cecil-ia-labs)**
 
-## Recursos
+## What you will find
 
-- Portal estático responsivo e acessível, sem dependências externas de runtime.
-- Interface em português e inglês, com seleção persistida no navegador.
-- Busca, filtros por área e cartões com links para repositórios e publicações.
-- Catálogo editável em [`data/projects.json`](data/projects.json), inicialmente com **7 repositórios públicos do GitHub e 2 registros de publicação no Zenodo**.
-- GitHub Actions com testes e publicação no GitHub Pages.
-- HTML semântico, respeito a `prefers-reduced-motion` e URLs `https` nos links externos.
+Our collection brings together **seven public software repositories and two research publications**. Topics range from research-data interoperability and media processing to AI infrastructure, data encoding, education, and visualization.
 
-## Estrutura
+### Selected projects
 
-```text
-.
-├── .github/workflows/deploy.yml   # testes e deploy em GitHub Pages
-├── .nojekyll                      # impede processamento pelo Jekyll
-├── 404.html                       # página de erro personalizada
-├── assets/favicon.svg             # identidade vetorial orbital
-├── data/projects.json             # catálogo curado PT/EN
-├── index.html                     # landing page
-├── scripts/app.js                 # traduções, filtros e renderização
-├── scripts/serve.mjs              # servidor local Node.js
-├── styles.css                     # layout e responsividade
-├── tests/site.test.mjs            # consistência do catálogo
-├── robots.txt
-└── sitemap.xml
-```
+- **[Lattes2ORCID](https://cecil-ia-labs.github.io/lattes2orcid/)** — Turn publication records from a Lattes CV XML export into BibTeX in your browser.
+- **[FFmpeg Media Toolkit](https://github.com/cecil-ia-labs/ffmpeg-dev)** — Reproducible FFmpeg workflows with a TypeScript library, CLI, and agent skills.
+- **[Quad-Dimensional DataMatrix](https://zenodo.org/records/23968974)** — An experimental approach to data representation across spatial, palette, and temporal coordinates.
+- **[Distributed Martian Atmospheric CO₂ Processing Swarms](https://zenodo.org/records/22249025)** — A conceptual research publication on distributed approaches to Martian atmospheric processing.
 
-## Desenvolvimento local
+The [live catalogue](https://cecil-ia-labs.github.io/#projects) lets you search by topic and explore the complete curated selection.
 
-**Requisito:** Node.js 22 ou superior. Não há `npm install` necessário.
+## Why we share
 
-```bash
-npm test
-npm run serve
-# http://localhost:8080
-```
+Open research benefits from **reproducibility, thoughtful critique, and proper attribution**. We publish code, working prototypes, and early-stage studies so others can inspect assumptions, learn from implementation details, and build on the work. Inclusion in the catalogue does not imply peer review or production readiness; each project's documentation and license define its scope.
 
-> Abra pela URL do servidor e não como `file://`, porque a aplicação busca o catálogo JSON via `fetch`.
+## Explore and contribute
 
-## Implantação inicial (repositório de organização)
+Visit a project's source repository to open an issue, propose a change, or read its documentation. Contributions are welcome under each project's own terms. The Observatory itself is licensed under [MIT](LICENSE); linked projects and scientific publications retain their respective licenses and attribution requirements.
 
-1. Em `https://github.com/organizations/cecil-ia-labs/repositories/new`, crie um repositório **público** chamado exatamente `cecil-ia-labs.github.io` na organização `cecil-ia-labs`. Não adicione README, licença ou `.gitignore` na criação se pretende enviar todos estes arquivos.
-2. Extraia os arquivos na raiz de um diretório local e execute:
+**Interested in the implementation?** See [development and deployment notes](docs/DEVELOPMENT.md). Deployments are manual to keep GitHub Actions usage under the organization's control.
 
-   ```bash
-   git init
-   git branch -M main
-   git add .
-   git commit -m "feat: launch Cecil-IA Labs open source portal"
-   git remote add origin https://github.com/cecil-ia-labs/cecil-ia-labs.github.io.git
-   git push -u origin main
-   ```
+---
 
-3. No GitHub, abra **Settings → Pages → Build and deployment → Source: GitHub Actions**. Verifique também se a organização permite Pages e workflows.
-4. Abra **Actions → Publish Cecil-IA Labs portal → Run workflow**, selecione `main` e confirme a execução. A publicação é manual por padrão, para controlar o uso de Actions.
-5. Visite `https://cecil-ia-labs.github.io/`.
-
-O workflow usa apenas permissões `contents: read`, `pages: write` e `id-token: write`. Não exige tokens adicionais, DNS personalizado, serviço externo ou secrets.
-
-## Atualizar o catálogo
-
-O arquivo `data/projects.json` contém um item por repositório GitHub ou publicação Zenodo. O catálogo reúne 9 itens de 2 fontes, com filtros por área e por publicações:
-
-```json
-{
-  "id": "nome-do-repo",
-  "name": "Nome público do projeto",
-  "category": "tools",
-  "featured": false,
-  "kind": "repository",
-  "description": {
-    "pt": "Descrição em português.",
-    "en": "English description."
-  },
-  "tags": ["TypeScript", "CLI"],
-  "repository": "https://github.com/cecil-ia-labs/nome-do-repo",
-  "website": "https://exemplo.org/"
-}
-```
-
-Para publicações sem repositório GitHub, utilize `kind: "publication"`, `category: "publications"`, `source: "zenodo"`, o DOI específico da versão e `website` apontando ao registro `https://zenodo.org/records/<id>`. Não crie `repository` fictício. Registros de Zenodo são resultados de pesquisa publicados, não necessariamente artigos revisados por pares.
-
-Categorias disponíveis: `research`, `publications`, `ai`, `tools`, `libraries`, `education`. `website` é opcional. As categorias e descrições são editoriais; confirme fatos e URLs antes de publicá-los. Use `kind: "fork"` quando houver upstream distinto e mantenha as atribuições no projeto original. **Não inclua repositórios privados.**
-
-Depois de editar, execute `npm test` e faça push em `main`. Para publicar a versão atualizada, execute manualmente **Actions → Publish Cecil-IA Labs portal → Run workflow**.
-
-## Escopo e privacidade
-
-O portal não coleta dados, não exige autenticação e não inclui analytics. A preferência de idioma é salva apenas no `localStorage` do dispositivo. O GitHub Pages pode registrar acessos conforme sua própria política de serviço. Cada link externo tem seus próprios termos e políticas.
-
-O catálogo é **curado**, e não uma listagem automática de toda a organização. Isso impede a publicação acidental de projetos privados ou a exibição sem revisão de metadados e descrições.
-
-## Licença
-
-Código deste portal sob [MIT](LICENSE). Licenças e atribuições de cada projeto vinculado permanecem as definidas nos respectivos repositórios; a licença deste portal não se estende automaticamente a eles.
+Maintained by **Cecil-IA Labs** · [Institutional website](https://www.cecilialabs.com/) · [GitHub](https://github.com/cecil-ia-labs)

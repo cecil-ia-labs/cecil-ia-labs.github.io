@@ -27,8 +27,8 @@ const labels = {
   }
 };
 
-let preferredLanguage = 'pt';
-try { preferredLanguage = localStorage.getItem('cecil-labs-lang') === 'en' ? 'en' : 'pt'; } catch { /* Storage may be disabled. */ }
+let preferredLanguage = 'en';
+try { preferredLanguage = localStorage.getItem('cecil-labs-lang') === 'pt' ? 'pt' : 'en'; } catch { /* Storage may be disabled. */ }
 const state = {lang:preferredLanguage, category:'all',query:'',projects:[]};
 const els = {
   grid:document.getElementById('project-grid'),result:document.getElementById('result-count'),empty:document.getElementById('empty-state'),

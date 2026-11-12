@@ -1,38 +1,46 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fcfaff">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="Portal open source da Cecil-IA Labs: pesquisa, ferramentas, bibliotecas e projetos experimentais para construir conhecimento aberto.">
+  <meta name="description" content="Discover Cecil-IA Labs open-source projects, research publications, developer tools, and reproducible experiments in our public observatory.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="author" content="Cecil-IA Labs">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
   <meta property="og:site_name" content="Cecil-IA Labs — Open Source">
   <meta property="og:title" content="Cecil-IA Labs | Open Source Observatory">
-  <meta property="og:description" content="Pesquisa aberta, software e experimentação. Explore os projetos públicos da Cecil-IA Labs.">
+  <meta property="og:description" content="Explore open research, developer tools, scientific publications, and experiments from Cecil-IA Labs.">
   <meta property="og:url" content="https://cecil-ia-labs.github.io/">
   <link rel="canonical" href="https://cecil-ia-labs.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cecil-IA Labs | Open Source Observatory">
+  <meta name="twitter:description" content="Open research, scientific publications, software tools, and reproducible experiments.">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
-  <title>Cecil-IA Labs · Open Source Observatory</title>
+  <title>Cecil-IA Labs | Open Source Projects & Research Publications</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cecilialabs.com/#organization","name":"Cecil-IA Labs","url":"https://www.cecilialabs.com/","sameAs":["https://github.com/cecil-ia-labs","https://cecil-ia-labs.github.io/"]},{"@type":"WebSite","@id":"https://cecil-ia-labs.github.io/#website","name":"Cecil-IA Labs Open Source Observatory","url":"https://cecil-ia-labs.github.io/","inLanguage":["en","pt-BR"],"publisher":{"@id":"https://www.cecilialabs.com/#organization"}},{"@type":"CollectionPage","@id":"https://cecil-ia-labs.github.io/#collection","name":"Open Source Projects and Research Publications","url":"https://cecil-ia-labs.github.io/","description":"Cecil-IA Labs Open Source Observatory: explore open research, developer tools, publications, and reproducible experiments.","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lattes2ORCID","url":"https://cecil-ia-labs.github.io/lattes2orcid/"},{"@type":"ListItem","position":2,"name":"Quad-Dimensional DataMatrix","url":"https://doi.org/10.5281/zenodo.23968973"},{"@type":"ListItem","position":3,"name":"FFmpeg Media Toolkit","url":"https://www.npmjs.com/package/@cecilialabs/ffmpeg"},{"@type":"ListItem","position":4,"name":"Remote Ingestion Retrieval","url":"https://github.com/cecil-ia-labs/remote-ingestion-retrieval"},{"@type":"ListItem","position":5,"name":"Prompts Oficina","url":"https://github.com/cecil-ia-labs/prompts-oficina"},{"@type":"ListItem","position":6,"name":"D3 WordCloud React","url":"https://www.npmjs.com/package/@cecilialabs/d3-wordcloud-react"},{"@type":"ListItem","position":7,"name":"Semantic UI Icon Picker","url":"https://www.npmjs.com/package/@cecilialabs/semantic-ui-react-icon-picker"},{"@type":"ListItem","position":8,"name":"Quad-Dimensional DataMatrix — RfD v0.2.0","url":"https://zenodo.org/records/23968974"},{"@type":"ListItem","position":9,"name":"Distributed Martian Atmospheric CO₂ Processing Swarms","url":"https://zenodo.org/records/22249025"}]}}]}</script>
   <script src="/scripts/app.js" type="module" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main" data-i18n="skip">Pular para o conteúdo</a>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
   <div class="site-frame">
     <header class="topbar shell">
-      <a class="brand" href="/" aria-label="Cecil-IA Labs — página inicial">
+      <a class="brand" href="/" aria-label="Cecil-IA Labs — home">
         <img width="46" height="46" src="/assets/favicon.svg" alt="">
         <span class="brand-name">Cecil<span class="brand-dash">-IA</span><small>LABS / OPEN SOURCE</small></span>
       </a>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#projects" data-i18n="navProjects">Projetos e publicações</a>
-        <a href="#approach" data-i18n="navApproach">Nossa abordagem</a>
-        <a href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer" class="nav-external"><span data-i18n="navInstitute">Laboratório</span><span aria-hidden="true"> ↗</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#projects" data-i18n="navProjects">Projects & publications</a>
+        <a href="#approach" data-i18n="navApproach">Our approach</a>
+        <a href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer" class="nav-external"><span data-i18n="navInstitute">Laboratory</span><span aria-hidden="true"> ↗</span></a>
       </nav>
       <div class="topbar-actions">
-        <button type="button" class="lang-button" id="language-toggle" aria-label="Switch language to English" title="Switch language">EN</button>
-        <a class="github-link" href="https://github.com/cecil-ia-labs" target="_blank" rel="noopener noreferrer" aria-label="GitHub da organização Cecil-IA Labs">
+        <button type="button" class="lang-button" id="language-toggle" aria-label="Mudar idioma para português" title="Switch language">PT</button>
+        <a class="github-link" href="https://github.com/cecil-ia-labs" target="_blank" rel="noopener noreferrer" aria-label="Cecil-IA Labs organization on GitHub">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M12 .9A11.1 11.1 0 0 0 8.5 22.5c.55.1.75-.24.75-.53v-2.04c-3.06.67-3.71-1.3-3.71-1.3-.5-1.27-1.22-1.61-1.22-1.61-.99-.69.08-.68.08-.68 1.1.08 1.68 1.13 1.68 1.13.98 1.67 2.56 1.19 3.18.91.1-.7.38-1.18.69-1.45-2.44-.28-5-1.22-5-5.45 0-1.2.43-2.2 1.13-2.97-.11-.28-.49-1.4.11-2.92 0 0 .92-.29 3.01 1.13a10.4 10.4 0 0 1 5.48 0c2.09-1.42 3.01-1.13 3.01-1.13.6 1.52.22 2.64.11 2.92.7.77 1.13 1.77 1.13 2.97 0 4.24-2.56 5.17-5.01 5.45.39.34.74 1 .74 2.03v3.01c0 .3.2.64.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>
         </a>
       </div>
@@ -41,17 +49,17 @@
     <main id="main">
       <section class="hero shell" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> <span data-i18n="heroEyebrow">OBSERVATÓRIO OPEN SOURCE / CECIL-IA LABS</span></p>
-          <h1 id="hero-title" data-i18n-html="heroTitle">Ideias em órbita.<br><span>Conhecimento em código.</span></h1>
-          <p class="hero-description" data-i18n="heroDescription">Investigamos sistemas, construímos ferramentas e compartilhamos o processo. Um espaço para ciência aberta, engenharia de software e experimentação aplicada.</p>
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> <span data-i18n="heroEyebrow">OPEN SOURCE OBSERVATORY / CECIL-IA LABS</span></p>
+          <h1 id="hero-title" data-i18n-html="heroTitle">Ideas in orbit.<br><span>Knowledge in code.</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">We investigate systems, build tools, and share the process. A space for open science, software engineering, and applied experimentation.</p>
           <div class="hero-cta">
-            <a class="button button-primary" href="#projects"><span data-i18n="explore">Explorar projetos</span><span aria-hidden="true">↘</span></a>
-            <a class="button button-outline" href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="institutional">Conhecer o laboratório</span><span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#projects"><span data-i18n="explore">Explore projects</span><span aria-hidden="true">↘</span></a>
+            <a class="button button-outline" href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="institutional">Visit the laboratory</span><span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-stats" aria-label="Informações do portal">
-            <div><strong id="stat-total">09</strong><span data-i18n="statProjects">itens catalogados</span></div>
-            <div><strong>100%</strong><span data-i18n="statOpen">catálogo público</span></div>
-            <div><strong>PT / EN</strong><span data-i18n="statLanguages">interface bilíngue</span></div>
+            <div><strong id="stat-total">09</strong><span data-i18n="statProjects">catalog entries</span></div>
+            <div><strong>100%</strong><span data-i18n="statOpen">public catalog</span></div>
+            <div><strong>PT / EN</strong><span data-i18n="statLanguages">bilingual interface</span></div>
           </div>
         </div>
         <div class="orbital-visual" aria-hidden="true">
@@ -68,42 +76,42 @@
 
       <section class="section projects-section shell" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <div><p class="eyebrow">01 / <span data-i18n="catalogLabel">CATÁLOGO ABERTO</span></p><h2 id="projects-title" data-i18n="projectsTitle">Projetos e publicações</h2></div>
-          <p class="section-intro" data-i18n="projectsIntro">Código, documentação e publicações científicas reunidos num só lugar. Os registros preservam seus endereços e atribuições nas fontes originais.</p>
+          <div><p class="eyebrow">01 / <span data-i18n="catalogLabel">OPEN CATALOG</span></p><h2 id="projects-title" data-i18n="projectsTitle">Projects & publications</h2></div>
+          <p class="section-intro" data-i18n="projectsIntro">Code, documentation, and scientific publications in one place. Records retain their original source links and attribution.</p>
         </div>
         <div class="catalog-controls">
-          <label class="search-box" for="search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.6 15.6 5.1 5.1"/></svg><span class="sr-only" data-i18n="searchLabel">Pesquisar projetos</span><input id="search" type="search" placeholder="Pesquisar nome, tecnologia ou assunto..." autocomplete="off"></label>
-          <div class="filter-list" id="filters" role="group" aria-label="Filtrar por categoria">
-            <button type="button" class="filter active" data-category="all" aria-pressed="true" data-i18n="filterAll">Todos</button>
-            <button type="button" class="filter" data-category="publications" aria-pressed="false" data-i18n="filterPublications">Publicações</button>
-            <button type="button" class="filter" data-category="research" aria-pressed="false" data-i18n="filterResearch">Pesquisa</button>
-            <button type="button" class="filter" data-category="ai" aria-pressed="false" data-i18n="filterAi">IA & Dados</button>
-            <button type="button" class="filter" data-category="tools" aria-pressed="false" data-i18n="filterTools">Ferramentas</button>
-            <button type="button" class="filter" data-category="libraries" aria-pressed="false" data-i18n="filterLibraries">Bibliotecas</button>
-            <button type="button" class="filter" data-category="education" aria-pressed="false" data-i18n="filterEducation">Educação</button>
+          <label class="search-box" for="search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.6 15.6 5.1 5.1"/></svg><span class="sr-only" data-i18n="searchLabel">Search projects</span><input id="search" type="search" placeholder="Search by name, technology, or topic..." autocomplete="off"></label>
+          <div class="filter-list" id="filters" role="group" aria-label="Filter by category">
+            <button type="button" class="filter active" data-category="all" aria-pressed="true" data-i18n="filterAll">All</button>
+            <button type="button" class="filter" data-category="publications" aria-pressed="false" data-i18n="filterPublications">Publications</button>
+            <button type="button" class="filter" data-category="research" aria-pressed="false" data-i18n="filterResearch">Research</button>
+            <button type="button" class="filter" data-category="ai" aria-pressed="false" data-i18n="filterAi">AI & Data</button>
+            <button type="button" class="filter" data-category="tools" aria-pressed="false" data-i18n="filterTools">Tools</button>
+            <button type="button" class="filter" data-category="libraries" aria-pressed="false" data-i18n="filterLibraries">Libraries</button>
+            <button type="button" class="filter" data-category="education" aria-pressed="false" data-i18n="filterEducation">Education</button>
           </div>
         </div>
-        <div class="catalog-status"><span id="result-count" role="status" aria-live="polite">Carregando projetos...</span><span class="catalog-hint" data-i18n="catalogHint">SELEÇÃO CURADA / GITHUB + ZENODO</span></div>
+        <div class="catalog-status"><span id="result-count" role="status" aria-live="polite">Loading projects...</span><span class="catalog-hint" data-i18n="catalogHint">CURATED SELECTION / GITHUB + ZENODO</span></div>
         <div class="project-grid" id="project-grid" aria-live="off"></div>
-        <div class="empty-state" id="empty-state" hidden><div class="empty-symbol" aria-hidden="true">⌁</div><h3 data-i18n="noResults">Nenhum projeto encontrado.</h3><p data-i18n="noResultsHint">Experimente outra palavra-chave ou categoria.</p><button type="button" id="clear-filters" class="button button-outline" data-i18n="clearFilters">Limpar filtros</button></div>
+        <div class="empty-state" id="empty-state" hidden><div class="empty-symbol" aria-hidden="true">⌁</div><h3 data-i18n="noResults">No matching projects.</h3><p data-i18n="noResultsHint">Try another search or category.</p><button type="button" id="clear-filters" class="button button-outline" data-i18n="clearFilters">Clear filters</button></div>
         <noscript><p>Este catálogo usa JavaScript para pesquisa e filtros. <a href="https://github.com/orgs/cecil-ia-labs/repositories">Consulte os repositórios diretamente no GitHub.</a></p></noscript>
-        <a class="all-repos" href="https://github.com/orgs/cecil-ia-labs/repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="allRepos">Ver todos os repositórios no GitHub</span><span aria-hidden="true">↗</span></a>
+        <a class="all-repos" href="https://github.com/orgs/cecil-ia-labs/repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="allRepos">Browse all repositories on GitHub</span><span aria-hidden="true">↗</span></a>
       </section>
 
       <section class="section approach-section" id="approach" aria-labelledby="approach-title">
         <div class="shell">
-          <div class="section-heading"><div><p class="eyebrow">02 / <span data-i18n="approachLabel">MÉTODO E PRINCÍPIOS</span></p><h2 id="approach-title" data-i18n="approachTitle">Construir, verificar, compartilhar.</h2></div><p class="section-intro" data-i18n="approachIntro">O laboratório conecta hipóteses, modelos e protótipos. Publicar código e documentação é parte do processo de pesquisa.</p></div>
+          <div class="section-heading"><div><p class="eyebrow">02 / <span data-i18n="approachLabel">METHOD & PRINCIPLES</span></p><h2 id="approach-title" data-i18n="approachTitle">Build, verify, share.</h2></div><p class="section-intro" data-i18n="approachIntro">The laboratory connects hypotheses, models, and prototypes. Publishing code and documentation is part of the research process.</p></div>
           <div class="principles">
-            <article class="principle"><span class="principle-num">01 /</span><span class="principle-mark" aria-hidden="true">◎</span><h3 data-i18n="principle1Title">Experimentação</h3><p data-i18n="principle1Body">Testamos ideias com modelos, simulações e implementações reproduzíveis.</p></article>
-            <article class="principle"><span class="principle-num">02 /</span><span class="principle-mark" aria-hidden="true">⌘</span><h3 data-i18n="principle2Title">Engenharia aberta</h3><p data-i18n="principle2Body">Compartilhamos ferramentas, decisões técnicas e caminhos de evolução.</p></article>
-            <article class="principle"><span class="principle-num">03 /</span><span class="principle-mark" aria-hidden="true">⟡</span><h3 data-i18n="principle3Title">Colaboração</h3><p data-i18n="principle3Body">A documentação e o código oferecem pontos de partida para crítica e contribuição.</p></article>
+            <article class="principle"><span class="principle-num">01 /</span><span class="principle-mark" aria-hidden="true">◎</span><h3 data-i18n="principle1Title">Experimentation</h3><p data-i18n="principle1Body">We test ideas with models, simulations, and reproducible implementations.</p></article>
+            <article class="principle"><span class="principle-num">02 /</span><span class="principle-mark" aria-hidden="true">⌘</span><h3 data-i18n="principle2Title">Open engineering</h3><p data-i18n="principle2Body">We share tools, technical decisions, and paths for further development.</p></article>
+            <article class="principle"><span class="principle-num">03 /</span><span class="principle-mark" aria-hidden="true">⟡</span><h3 data-i18n="principle3Title">Collaboration</h3><p data-i18n="principle3Body">Documentation and code provide starting points for feedback and contributions.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="contact shell" aria-labelledby="contact-title"><div class="contact-glow" aria-hidden="true"></div><p class="eyebrow">03 / <span data-i18n="connectLabel">CONTINUE A EXPLORAÇÃO</span></p><h2 id="contact-title" data-i18n-html="contactTitle">A próxima descoberta<br><span>começa com uma pergunta.</span></h2><div class="contact-actions"><a class="button button-primary" href="https://github.com/cecil-ia-labs" target="_blank" rel="noopener noreferrer"><span data-i18n="visitGitHub">Visitar organização no GitHub</span><span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="institutional">Conhecer o laboratório</span><span aria-hidden="true">↗</span></a></div></section>
+      <section class="contact shell" aria-labelledby="contact-title"><div class="contact-glow" aria-hidden="true"></div><p class="eyebrow">03 / <span data-i18n="connectLabel">KEEP EXPLORING</span></p><h2 id="contact-title" data-i18n-html="contactTitle">The next discovery<br><span>starts with a question.</span></h2><div class="contact-actions"><a class="button button-primary" href="https://github.com/cecil-ia-labs" target="_blank" rel="noopener noreferrer"><span data-i18n="visitGitHub">Visit GitHub organization</span><span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="institutional">Conhecer o laboratório</span><span aria-hidden="true">↗</span></a></div></section>
     </main>
-    <footer class="footer shell"><div class="footer-left"><img width="31" height="31" src="/assets/favicon.svg" alt=""><span>© <span id="year">2026</span> Cecil-IA Labs <span class="footer-separator">/</span> <span data-i18n="footerTag">Ciência aberta, código compartilhado.</span></span></div><div class="footer-right"><a href="https://github.com/cecil-ia-labs" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer">cecilialabs.com ↗</a></div></footer>
+    <footer class="footer shell"><div class="footer-left"><img width="31" height="31" src="/assets/favicon.svg" alt=""><span>© <span id="year">2026</span> Cecil-IA Labs <span class="footer-separator">/</span> <span data-i18n="footerTag">Open science, shared code.</span></span></div><div class="footer-right"><a href="https://github.com/cecil-ia-labs" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.cecilialabs.com/" target="_blank" rel="noopener noreferrer">cecilialabs.com ↗</a></div></footer>
   </div>
 </body>
 </html>

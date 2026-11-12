@@ -49,7 +49,7 @@ test('main entrypoints and assets exist', () => {
     assert.ok(existsSync(resolve(root, file)), `Missing ${file}`);
   }
   const html = readFileSync(resolve(root, 'index.html'), 'utf8');
-  assert.match(html, /<html lang="pt-BR">/);
+  assert.match(html, /<html lang="en">/);
   const app = readFileSync(resolve(root, 'scripts/app.js'), 'utf8');
   assert.match(app, /data\/projects\.json/);
   assert.doesNotMatch(html, /<script[^>]*src="https?:\/\//);
@@ -64,4 +64,6 @@ test('light theme keeps its intentional warm-vivid palette', () => {
   assert.match(css, /color-scheme:\s*light/i);
   assert.match(html, /name="color-scheme" content="light"/);
   assert.match(html, /name="theme-color" content="#fcfaff"/);
+  assert.match(html, /<script type="application\/ld\+json">/);
+  assert.match(html, /name="robots" content="index,follow/);
 });
