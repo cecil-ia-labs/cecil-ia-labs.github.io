@@ -1,0 +1,14 @@
+{
+  "name": "cecil-ia-labs-github-pages",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "description": "Static open source portal for the Cecil-IA Labs GitHub organization",
+  "scripts": {
+    "test": "node --test tests/site.test.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

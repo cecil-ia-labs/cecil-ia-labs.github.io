@@ -1,0 +1,124 @@
+[
+  {
+    "id": "lattes2orcid",
+    "name": "Lattes2ORCID",
+    "category": "tools",
+    "featured": true,
+    "kind": "original",
+    "description": {
+      "pt": "Converta o XML do currículo Lattes em BibTeX no navegador para importar publicações no ORCID, sem enviar os dados a um servidor.",
+      "en": "Convert a Lattes CV XML file to BibTeX in your browser for importing publications into ORCID, without uploading personal data."
+    },
+    "tags": ["React", "Vite", "BibTeX", "Privacy"],
+    "repository": "https://github.com/cecil-ia-labs/lattes2orcid",
+    "website": "https://cecil-ia-labs.github.io/lattes2orcid/"
+  },
+  {
+    "id": "datamatrix-payload",
+    "name": "Quad-Dimensional DataMatrix",
+    "category": "research",
+    "featured": true,
+    "kind": "research",
+    "description": {
+      "pt": "Pesquisa experimental sobre representação de payloads em quatro coordenadas lógicas: posição X/Y, paleta hexadecimal e tempo.",
+      "en": "Experimental research into payload representation using four logical coordinates: X/Y position, a hexadecimal palette, and time."
+    },
+    "tags": ["Research", "Python", "GIF", "Data encoding"],
+    "repository": "https://github.com/cecil-ia-labs/datamatrix-payload",
+    "website": "https://doi.org/10.5281/zenodo.23968973"
+  },
+  {
+    "id": "ffmpeg-dev",
+    "name": "FFmpeg Media Toolkit",
+    "category": "tools",
+    "featured": true,
+    "kind": "original",
+    "description": {
+      "pt": "CLI, biblioteca TypeScript e Skills para fluxos FFmpeg/FFprobe tipados, verificáveis e reproduzíveis.",
+      "en": "A TypeScript library, CLI, and Skills for typed, verifiable, reproducible FFmpeg/FFprobe workflows."
+    },
+    "tags": ["TypeScript", "FFmpeg", "CLI", "Agents"],
+    "repository": "https://github.com/cecil-ia-labs/ffmpeg-dev",
+    "website": "https://www.npmjs.com/package/@cecilialabs/ffmpeg"
+  },
+  {
+    "id": "remote-ingestion-retrieval",
+    "name": "Remote Ingestion Retrieval",
+    "category": "ai",
+    "featured": false,
+    "kind": "repository",
+    "description": {
+      "pt": "Pipeline TypeScript para coletar páginas web, extrair Markdown, fragmentar conteúdo e sincronizar bases de conhecimento vetoriais.",
+      "en": "A TypeScript pipeline to collect web pages, extract Markdown, chunk content, and sync vector knowledge bases."
+    },
+    "tags": ["TypeScript", "RAG", "Qdrant", "Weaviate"],
+    "repository": "https://github.com/cecil-ia-labs/remote-ingestion-retrieval"
+  },
+  {
+    "id": "prompts-oficina",
+    "name": "Prompts Oficina",
+    "category": "education",
+    "featured": false,
+    "kind": "original",
+    "description": {
+      "pt": "Biblioteca aberta de prompts educacionais em português para professores e estudantes, com exemplos prontos para adaptar.",
+      "en": "An open Portuguese-language collection of educational prompts for teachers and students, with reusable examples."
+    },
+    "tags": ["Education", "Prompts", "Português", "AI literacy"],
+    "repository": "https://github.com/cecil-ia-labs/prompts-oficina"
+  },
+  {
+    "id": "d3-wordcloud-react",
+    "name": "D3 WordCloud React",
+    "category": "libraries",
+    "featured": false,
+    "kind": "fork",
+    "description": {
+      "pt": "Componente React + D3 para nuvens de palavras; fork independente com TypeScript, testes e manutenção própria.",
+      "en": "A React + D3 word cloud component; an independently maintained fork with TypeScript and automated tests."
+    },
+    "tags": ["React", "D3", "TypeScript", "Visualization"],
+    "repository": "https://github.com/cecil-ia-labs/d3-wordcloud-react",
+    "website": "https://www.npmjs.com/package/@cecilialabs/d3-wordcloud-react"
+  },
+  {
+    "id": "semantic-ui-react-icon-picker",
+    "name": "Semantic UI Icon Picker",
+    "category": "libraries",
+    "featured": false,
+    "kind": "fork",
+    "description": {
+      "pt": "Seletor pesquisável de ícones para React e semantic-ui-react; fork independente com manutenção e atribuições preservadas.",
+      "en": "A searchable icon picker for React and semantic-ui-react; an independently maintained fork preserving original attribution."
+    },
+    "tags": ["React", "TypeScript", "Semantic UI", "Components"],
+    "repository": "https://github.com/cecil-ia-labs/semantic-ui-react-icon-picker",
+    "website": "https://www.npmjs.com/package/@cecilialabs/semantic-ui-react-icon-picker"
+  },
+  {
+    "id": "lab-react-gantt",
+    "name": "Lab React Gantt",
+    "category": "libraries",
+    "featured": false,
+    "kind": "repository",
+    "description": {
+      "pt": "Código de componente Gantt para React, com visualização de tarefas, períodos e hierarquias.",
+      "en": "React Gantt component code for visualizing tasks, timelines, and hierarchies."
+    },
+    "tags": ["React", "Gantt", "Timeline", "UI"],
+    "repository": "https://github.com/cecil-ia-labs/lab-react-gantt"
+  },
+  {
+    "id": "gantt-task-react",
+    "name": "Gantt Task React",
+    "category": "libraries",
+    "featured": false,
+    "kind": "repository",
+    "description": {
+      "pt": "Componente de gráfico de Gantt interativo com React e TypeScript para cronogramas e planejamento.",
+      "en": "An interactive React and TypeScript Gantt chart component for project schedules and planning."
+    },
+    "tags": ["React", "TypeScript", "Gantt", "Planning"],
+    "repository": "https://github.com/cecil-ia-labs/gantt-task-react"
+  }
+]
