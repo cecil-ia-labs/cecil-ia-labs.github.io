@@ -13,7 +13,7 @@ Tema claro editorial com a paleta **Sunset Coral `#FF7A63`**, **Magenta `#E445A2
 - Portal estático responsivo e acessível, sem dependências externas de runtime.
 - Interface em português e inglês, com seleção persistida no navegador.
 - Busca, filtros por área e cartões com links para repositórios e publicações.
-- Catálogo editável em [`data/projects.json`](data/projects.json), inicialmente com **7 repositórios públicos catalogados**.
+- Catálogo editável em [`data/projects.json`](data/projects.json), inicialmente com **7 repositórios públicos do GitHub e 2 registros de publicação no Zenodo**.
 - GitHub Actions com testes e publicação no GitHub Pages.
 - HTML semântico, respeito a `prefers-reduced-motion` e URLs `https` nos links externos.
 
@@ -69,7 +69,7 @@ O workflow usa apenas permissões `contents: read`, `pages: write` e `id-token: 
 
 ## Atualizar o catálogo
 
-O arquivo `data/projects.json` contém um item por projeto:
+O arquivo `data/projects.json` contém um item por repositório GitHub ou publicação Zenodo. O catálogo reúne 9 itens de 2 fontes, com filtros por área e por publicações:
 
 ```json
 {
@@ -88,7 +88,9 @@ O arquivo `data/projects.json` contém um item por projeto:
 }
 ```
 
-Categorias disponíveis: `research`, `ai`, `tools`, `libraries`, `education`. `website` é opcional. As categorias e descrições são editoriais; confirme fatos e URLs antes de publicá-los. Use `kind: "fork"` quando houver upstream distinto e mantenha as atribuições no projeto original. **Não inclua repositórios privados.**
+Para publicações sem repositório GitHub, utilize `kind: "publication"`, `category: "publications"`, `source: "zenodo"`, o DOI específico da versão e `website` apontando ao registro `https://zenodo.org/records/<id>`. Não crie `repository` fictício. Registros de Zenodo são resultados de pesquisa publicados, não necessariamente artigos revisados por pares.
+
+Categorias disponíveis: `research`, `publications`, `ai`, `tools`, `libraries`, `education`. `website` é opcional. As categorias e descrições são editoriais; confirme fatos e URLs antes de publicá-los. Use `kind: "fork"` quando houver upstream distinto e mantenha as atribuições no projeto original. **Não inclua repositórios privados.**
 
 Depois de editar, execute `npm test` e faça push em `main`. Para publicar a versão atualizada, execute manualmente **Actions → Publish Cecil-IA Labs portal → Run workflow**.
 

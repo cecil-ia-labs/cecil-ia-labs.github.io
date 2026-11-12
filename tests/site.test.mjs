@@ -6,26 +6,42 @@ import { dirname, resolve } from 'node:path';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const projects = JSON.parse(readFileSync(resolve(root, 'data/projects.json'), 'utf8'));
-const categories = new Set(['research', 'ai', 'tools', 'education', 'libraries']);
+const categories = new Set(['research', 'publications', 'ai', 'tools', 'education', 'libraries']);
 
-// Curated static data; do not expose private repositories or infer status from repo names.
-test('catalog has unique public GitHub repository URLs', () => {
+// Curated static data: GitHub repositories and published Zenodo records.
+test('catalog contains unique public source records', () => {
   const ids = new Set();
-  const repos = new Set();
+  const sourceLinks = new Set();
   assert.ok(projects.length > 0);
-  for (const project of projects) {
-    assert.match(project.id, /^[a-z0-9-]+$/);
-    assert.ok(!ids.has(project.id), `Duplicate project id: ${project.id}`);
-    ids.add(project.id);
-    assert.match(project.repository, /^https:\/\/github\.com\/cecil-ia-labs\/[a-z0-9-]+$/i);
-    assert.ok(!repos.has(project.repository), `Duplicate repo URL: ${project.repository}`);
-    repos.add(project.repository);
-    assert.ok(categories.has(project.category));
-    assert.ok(['original', 'fork', 'research', 'repository'].includes(project.kind));
-    assert.ok(project.description.pt.trim() && project.description.en.trim());
-    assert.ok(Array.isArray(project.tags) && project.tags.length > 0);
-    if (project.website) assert.match(project.website, /^https:\/\//);
+  for (const item of projects) {
+    assert.match(item.id, /^[a-z0-9-]+$/);
+    assert.ok(!ids.has(item.id), "Duplicate item id: " + item.id);
+    ids.add(item.id);
+    assert.ok(categories.has(item.category));
+    assert.ok(['original', 'fork', 'research', 'repository', 'publication'].includes(item.kind));
+    assert.ok(item.description.pt.trim() && item.description.en.trim());
+    assert.ok(Array.isArray(item.tags) && item.tags.length > 0);
+    if (item.website) assert.match(item.website, /^https:\/\//);
+    if (item.kind === 'publication') {
+      assert.equal(item.source, 'zenodo');
+      assert.equal(item.category, 'publications');
+      assert.match(item.doi, /^10\.5281\/zenodo\.[0-9]+$/);
+      const recordId = item.doi.split('.').at(-1);
+      assert.equal(item.website, 'https://zenodo.org/records/' + recordId);
+      assert.equal(item.repository, undefined);
+      assert.ok(!sourceLinks.has(item.website), "Duplicate Zenodo record: " + item.website);
+      sourceLinks.add(item.website);
+    } else {
+      assert.match(item.repository, /^https:\/\/github\.com\/cecil-ia-labs\/[a-z0-9-]+$/i);
+      assert.ok(!sourceLinks.has(item.repository), "Duplicate repository URL: " + item.repository);
+      sourceLinks.add(item.repository);
+    }
   }
+});
+
+test('the two requested Zenodo versions are cataloged separately from their source code', () => {
+  const ids = projects.filter(item => item.source === 'zenodo').map(item => item.doi).sort();
+  assert.deepEqual(ids, ['10.5281/zenodo.22249025', '10.5281/zenodo.23968974']);
 });
 
 test('main entrypoints and assets exist', () => {

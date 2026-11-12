@@ -9,7 +9,12 @@
       "pt": "Converta o XML do currículo Lattes em BibTeX no navegador para importar publicações no ORCID, sem enviar os dados a um servidor.",
       "en": "Convert a Lattes CV XML file to BibTeX in your browser for importing publications into ORCID, without uploading personal data."
     },
-    "tags": ["React", "Vite", "BibTeX", "Privacy"],
+    "tags": [
+      "React",
+      "Vite",
+      "BibTeX",
+      "Privacy"
+    ],
     "repository": "https://github.com/cecil-ia-labs/lattes2orcid",
     "website": "https://cecil-ia-labs.github.io/lattes2orcid/"
   },
@@ -23,7 +28,12 @@
       "pt": "Pesquisa experimental sobre representação de payloads em quatro coordenadas lógicas: posição X/Y, paleta hexadecimal e tempo.",
       "en": "Experimental research into payload representation using four logical coordinates: X/Y position, a hexadecimal palette, and time."
     },
-    "tags": ["Research", "Python", "GIF", "Data encoding"],
+    "tags": [
+      "Research",
+      "Python",
+      "GIF",
+      "Data encoding"
+    ],
     "repository": "https://github.com/cecil-ia-labs/datamatrix-payload",
     "website": "https://doi.org/10.5281/zenodo.23968973"
   },
@@ -37,7 +47,12 @@
       "pt": "CLI, biblioteca TypeScript e Skills para fluxos FFmpeg/FFprobe tipados, verificáveis e reproduzíveis.",
       "en": "A TypeScript library, CLI, and Skills for typed, verifiable, reproducible FFmpeg/FFprobe workflows."
     },
-    "tags": ["TypeScript", "FFmpeg", "CLI", "Agents"],
+    "tags": [
+      "TypeScript",
+      "FFmpeg",
+      "CLI",
+      "Agents"
+    ],
     "repository": "https://github.com/cecil-ia-labs/ffmpeg-dev",
     "website": "https://www.npmjs.com/package/@cecilialabs/ffmpeg"
   },
@@ -51,7 +66,12 @@
       "pt": "Pipeline TypeScript para coletar páginas web, extrair Markdown, fragmentar conteúdo e sincronizar bases de conhecimento vetoriais.",
       "en": "A TypeScript pipeline to collect web pages, extract Markdown, chunk content, and sync vector knowledge bases."
     },
-    "tags": ["TypeScript", "RAG", "Qdrant", "Weaviate"],
+    "tags": [
+      "TypeScript",
+      "RAG",
+      "Qdrant",
+      "Weaviate"
+    ],
     "repository": "https://github.com/cecil-ia-labs/remote-ingestion-retrieval"
   },
   {
@@ -64,7 +84,12 @@
       "pt": "Biblioteca aberta de prompts educacionais em português para professores e estudantes, com exemplos prontos para adaptar.",
       "en": "An open Portuguese-language collection of educational prompts for teachers and students, with reusable examples."
     },
-    "tags": ["Education", "Prompts", "Português", "AI literacy"],
+    "tags": [
+      "Education",
+      "Prompts",
+      "Português",
+      "AI literacy"
+    ],
     "repository": "https://github.com/cecil-ia-labs/prompts-oficina"
   },
   {
@@ -77,7 +102,12 @@
       "pt": "Componente React + D3 para nuvens de palavras; fork independente com TypeScript, testes e manutenção própria.",
       "en": "A React + D3 word cloud component; an independently maintained fork with TypeScript and automated tests."
     },
-    "tags": ["React", "D3", "TypeScript", "Visualization"],
+    "tags": [
+      "React",
+      "D3",
+      "TypeScript",
+      "Visualization"
+    ],
     "repository": "https://github.com/cecil-ia-labs/d3-wordcloud-react",
     "website": "https://www.npmjs.com/package/@cecilialabs/d3-wordcloud-react"
   },
@@ -91,8 +121,53 @@
       "pt": "Seletor pesquisável de ícones para React e semantic-ui-react; fork independente com manutenção e atribuições preservadas.",
       "en": "A searchable icon picker for React and semantic-ui-react; an independently maintained fork preserving original attribution."
     },
-    "tags": ["React", "TypeScript", "Semantic UI", "Components"],
+    "tags": [
+      "React",
+      "TypeScript",
+      "Semantic UI",
+      "Components"
+    ],
     "repository": "https://github.com/cecil-ia-labs/semantic-ui-react-icon-picker",
     "website": "https://www.npmjs.com/package/@cecilialabs/semantic-ui-react-icon-picker"
+  },
+  {
+    "id": "zenodo-datamatrix-23968974",
+    "name": "Quad-Dimensional DataMatrix — RfD v0.2.0",
+    "category": "publications",
+    "featured": false,
+    "kind": "publication",
+    "source": "zenodo",
+    "description": {
+      "pt": "Publicação arquivada do Request for Discussion sobre representação quadridimensional de dados: coordenadas X/Y, paleta hexadecimal e estados temporais. Estudo conceitual, versão 0.2.0.",
+      "en": "Archived Request for Discussion on quad-dimensional data representation: X/Y coordinates, hexadecimal palette, and temporal states. Conceptual research, version 0.2.0."
+    },
+    "tags": [
+      "Zenodo",
+      "Data encoding",
+      "Research",
+      "v0.2.0"
+    ],
+    "doi": "10.5281/zenodo.23968974",
+    "website": "https://zenodo.org/records/23968974"
+  },
+  {
+    "id": "zenodo-martian-co2-22249025",
+    "name": "Distributed Martian Atmospheric CO₂ Processing Swarms",
+    "category": "publications",
+    "featured": false,
+    "kind": "publication",
+    "source": "zenodo",
+    "description": {
+      "pt": "Estudo conceitual de enxames de microrreatores autônomos para processamento do CO₂ atmosférico marciano por propostas plasma-vórtice e ISRU; não constitui demonstração experimental.",
+      "en": "Conceptual study of autonomous microreactor swarms for Martian atmospheric CO₂ processing via proposed plasma-vortex ISRU mechanisms; not an experimental demonstration."
+    },
+    "tags": [
+      "Zenodo",
+      "Mars",
+      "ISRU",
+      "v0.2.4"
+    ],
+    "doi": "10.5281/zenodo.22249025",
+    "website": "https://zenodo.org/records/22249025"
   }
 ]
