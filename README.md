@@ -62,7 +62,7 @@ npm run serve
    ```
 
 3. No GitHub, abra **Settings → Pages → Build and deployment → Source: GitHub Actions**. Verifique também se a organização permite Pages e workflows.
-4. Abra **Actions** e confirme que o workflow `Publish Cecil-IA Labs portal` concluiu o deploy. Se necessário, execute `Run workflow` manualmente.
+4. Abra **Actions → Publish Cecil-IA Labs portal → Run workflow**, selecione `main` e confirme a execução. A publicação é manual por padrão, para controlar o uso de Actions.
 5. Visite `https://cecil-ia-labs.github.io/`.
 
 O workflow usa apenas permissões `contents: read`, `pages: write` e `id-token: write`. Não exige tokens adicionais, DNS personalizado, serviço externo ou secrets.
@@ -90,7 +90,7 @@ O arquivo `data/projects.json` contém um item por projeto:
 
 Categorias disponíveis: `research`, `ai`, `tools`, `libraries`, `education`. `website` é opcional. As categorias e descrições são editoriais; confirme fatos e URLs antes de publicá-los. Use `kind: "fork"` quando houver upstream distinto e mantenha as atribuições no projeto original. **Não inclua repositórios privados.**
 
-Depois de editar, execute `npm test` e faça push em `main`. O workflow publica o catálogo atualizado automaticamente.
+Depois de editar, execute `npm test` e faça push em `main`. Para publicar a versão atualizada, execute manualmente **Actions → Publish Cecil-IA Labs portal → Run workflow**.
 
 ## Escopo e privacidade
 
