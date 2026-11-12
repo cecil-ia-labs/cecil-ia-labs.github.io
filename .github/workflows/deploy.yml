@@ -32,6 +32,12 @@ jobs:
         run: |
           mkdir -p _site/assets _site/data _site/scripts
           cp index.html 404.html styles.css robots.txt sitemap.xml .nojekyll _site/
+          # Keep Google Search Console verification files available at the site root.
+          for verification_file in google*.html; do
+            if [ -f "$verification_file" ]; then
+              cp "$verification_file" _site/
+            fi
+          done
           cp assets/favicon.svg _site/assets/
           cp data/projects.json _site/data/
           cp scripts/app.js _site/scripts/
